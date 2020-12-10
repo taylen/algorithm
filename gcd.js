@@ -4,5 +4,5 @@ function getGcd(p, q) {
   if(q === 0) {
     return p;
   }
-  return arguments.caller.call(q, p % q);
+  return arguments.callee.call(this, q, p % q);
 }
